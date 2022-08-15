@@ -1,0 +1,521 @@
+{
+	"info": {
+		"_postman_id": "71a14628-76ce-4b26-bedf-f6c68eb30b2a",
+		"name": "CoderHouse_proyecto_final",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19056781"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Login admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjkwNDU5NWQ0LTVmOGUtNGY1MC1iNTM1LTFmYzVlZjE3MTU4MCIsIm5hbWUiOiJhZG1pbiIsImxhc3RuYW1lIjoiYWRtaW4iLCJlbWFpbCI6Imp1bGlhbkBhZG1pbi5jb20iLCJwaG9uZSI6Iis1NDExNTU2Njg4NzciLCJpbWFnZSI6Imh0dHBzOi8vY2RuLWljb25zLXBuZy5mbGF0aWNvbi5jb20vNTEyLzIxOS8yMTk5ODMucG5nIiwiaWF0IjoxNjYwNTc0NjE2LCJleHAiOjE2NjA1NzgyMTZ9.cLDxaJyc5xBaH9305QWGyhd_RPj-lhMw5rWs4y84Q3U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"julian@admin.com\",\n    \"password\": \"cable234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}login",
+							"host": [
+								"{{host}}login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registro de usuario (sin auth)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"usuariofake1@mailfake.com\",\n    \"password\": \"fake1234\",\n    \"name\": \"Bort\",\n    \"lastname\": \"Thompsom\",\n    \"phone\": \"+541123456978\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}registro",
+							"host": [
+								"{{host}}registro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registro de admin (sin auth)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n    \"name\": \"admin\",\n    \"lastname\": \"admin\",\n    \"email\": \"julian@admin.com\",\n    \"password\": \"cable234\",\n    \"phone\": \"+541155668877\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}registro",
+							"host": [
+								"{{host}}registro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"usuariofake1@mailfake.com\",\n    \"password\": \"fake1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}login",
+							"host": [
+								"{{host}}login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cargar imagen a usuario (usuario)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIyOTRhY2ZmLTQxMmQtNGVkMC04ZmYwLTA5NWVjOGNjYmRmZCIsIm5hbWUiOiJhbHlzb24iLCJsYXN0bmFtZSI6ImZyaXRzY2giLCJlbWFpbCI6ImFseXNvbi5mcml0c2NoMzdAZXRoZXJlYWwuZW1haWwiLCJwaG9uZSI6Iis1NDExNDQ0NDEyMzQiLCJpbWFnZSI6IlxcaW1hZ2VzXFx1c2Vyc1xcUGljdHVyZVVzZXJfMTY1OTAxNTQyMTIyMi5qcGciLCJpYXQiOjE2NTkwMjE1NzUsImV4cCI6MTY1OTAyNTE3NX0.6X-kBwj6BCVyg2zEi-hJfvWI4_dxSw847wESU8eTFZQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/telecom/Imágenes/Perfil/Perfil1.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}user/uploadimage",
+							"host": [
+								"{{host}}user"
+							],
+							"path": [
+								"uploadimage"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Add Producto (admin)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjkwNDU5NWQ0LTVmOGUtNGY1MC1iNTM1LTFmYzVlZjE3MTU4MCIsIm5hbWUiOiJhZG1pbiIsImxhc3RuYW1lIjoiYWRtaW4iLCJlbWFpbCI6Imp1bGlhbkBhZG1pbi5jb20iLCJwaG9uZSI6Iis1NDExNTU2Njg4NzciLCJpbWFnZSI6Imh0dHBzOi8vY2RuLWljb25zLXBuZy5mbGF0aWNvbi5jb20vNTEyLzIxOS8yMTk5ODMucG5nIiwiaWF0IjoxNjYwNTkzNDI4LCJleHAiOjE2NjA1OTcwMjh9.IJaPeVHsUHN_gt3pcrGf914ugMNp2RTSGnWp_es_aMU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"GPU 2\",\n    \"description\": \"ASUS 3080\",\n    \"price\": 390000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}api/products",
+							"host": [
+								"{{host}}api"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener productos (sin auth)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}api/products",
+							"host": [
+								"{{host}}api"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener un producto por Id (usuario)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MDZmNzZkLWRhMmItNDU5Mi1hYTVkLWY2Yjg0MDEzOTg4ZSIsIm5hbWUiOiJhZG1pbiIsImxhc3RuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsInBob25lIjoiKzU0MTE0NDQ0MTIzNCIsImltYWdlIjoiaHR0cHM6Ly9jZG4taWNvbnMtcG5nLmZsYXRpY29uLmNvbS81MTIvMjE5LzIxOTk4My5wbmciLCJpYXQiOjE2NTkwMTg3NDIsImV4cCI6MTY1OTAyMjM0Mn0.N11XDtC8BsL2CfwSgljfD0GqDeBAaK3qll2INjZN6R0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}api/products/1dd56a0c-103d-41f3-b34e-8600732da5bb",
+							"host": [
+								"{{host}}api"
+							],
+							"path": [
+								"products",
+								"1dd56a0c-103d-41f3-b34e-8600732da5bb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar producto (admin)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MDZmNzZkLWRhMmItNDU5Mi1hYTVkLWY2Yjg0MDEzOTg4ZSIsIm5hbWUiOiJhZG1pbiIsImxhc3RuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsInBob25lIjoiKzU0MTE0NDQ0MTIzNCIsImltYWdlIjoiaHR0cHM6Ly9jZG4taWNvbnMtcG5nLmZsYXRpY29uLmNvbS81MTIvMjE5LzIxOTk4My5wbmciLCJpYXQiOjE2NTkwMTg3NDIsImV4cCI6MTY1OTAyMjM0Mn0.N11XDtC8BsL2CfwSgljfD0GqDeBAaK3qll2INjZN6R0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"test\",\n    \"description\": \"Producto test\",\n    \"image\": \"http://localhost:8080/images/IMG_20180917_104633.jpg\",\n    \"price\": 130\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}api/products/58a9b274-4f79-4cd9-b2ec-3fe9ee4163a1",
+							"host": [
+								"{{host}}api"
+							],
+							"path": [
+								"products",
+								"58a9b274-4f79-4cd9-b2ec-3fe9ee4163a1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete producto (admin)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MDZmNzZkLWRhMmItNDU5Mi1hYTVkLWY2Yjg0MDEzOTg4ZSIsIm5hbWUiOiJhZG1pbiIsImxhc3RuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsInBob25lIjoiKzU0MTE0NDQ0MTIzNCIsImltYWdlIjoiaHR0cHM6Ly9jZG4taWNvbnMtcG5nLmZsYXRpY29uLmNvbS81MTIvMjE5LzIxOTk4My5wbmciLCJpYXQiOjE2NTkwMjAzMDgsImV4cCI6MTY1OTAyMzkwOH0._2jawW3aX5qZiqSECoL7nz5HiW9VZVWH6eBdigizm0w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}api/products/3afdce75-8a88-4a4c-b335-63937b5998f1",
+							"host": [
+								"{{host}}api"
+							],
+							"path": [
+								"products",
+								"3afdce75-8a88-4a4c-b335-63937b5998f1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cargar imagen a producto (admin)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MDZmNzZkLWRhMmItNDU5Mi1hYTVkLWY2Yjg0MDEzOTg4ZSIsIm5hbWUiOiJhZG1pbiIsImxhc3RuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsInBob25lIjoiKzU0MTE0NDQ0MTIzNCIsImltYWdlIjoiaHR0cHM6Ly9jZG4taWNvbnMtcG5nLmZsYXRpY29uLmNvbS81MTIvMjE5LzIxOTk4My5wbmciLCJpYXQiOjE2NTkwMjE4MTQsImV4cCI6MTY1OTAyNTQxNH0.Od8rYMtgVNYaXEZMsTUSpNrrb9qcfJ5mw1AobDUpm9I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/telecom/Imágenes/Productos/choose-product-online-color-icon-3646866.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}api/products/uploadimage/ded9d71e-51de-4a3b-826d-81161b28d43d",
+							"host": [
+								"{{host}}api"
+							],
+							"path": [
+								"products",
+								"uploadimage",
+								"ded9d71e-51de-4a3b-826d-81161b28d43d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "Obtener ordenes (usuario)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MDZmNzZkLWRhMmItNDU5Mi1hYTVkLWY2Yjg0MDEzOTg4ZSIsIm5hbWUiOiJhZG1pbiIsImxhc3RuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsInBob25lIjoiKzU0MTE0NDQ0MTIzNCIsImltYWdlIjoiaHR0cHM6Ly9jZG4taWNvbnMtcG5nLmZsYXRpY29uLmNvbS81MTIvMjE5LzIxOTk4My5wbmciLCJpYXQiOjE2NTkwNjEwMzMsImV4cCI6MTY1OTA2NDYzM30.gVdemEmBwiK37PcWLildiM880SoNkzmYx8tlGjHLCRo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}api/orders",
+							"host": [
+								"{{host}}api"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add orden (usuario)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc1OGQwYjBjLWI5OWEtNGE3My05YTEwLWRjMmVlYTk1NjBjMSIsIm5hbWUiOiJCb3J0IiwibGFzdG5hbWUiOiJUaG9tcHNvbSIsImVtYWlsIjoidXN1YXJpb2Zha2UxQG1haWxmYWtlLmNvbSIsInBob25lIjoiKzU0MTEyMzQ1Njk3OCIsImltYWdlIjoiaHR0cHM6Ly9jZG4taWNvbnMtcG5nLmZsYXRpY29uLmNvbS81MTIvMjE5LzIxOTk4My5wbmciLCJpYXQiOjE2NjA1OTA0OTQsImV4cCI6MTY2MDU5NDA5NH0.Wbt6pTri3gkf3_6sD2OBmiiKN6kHJrZ3swpT4JBB68Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{host}}api/orders",
+							"host": [
+								"{{host}}api"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ShoppingCart",
+			"item": [
+				{
+					"name": "Obtener productos del carrito (usuario)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc1OGQwYjBjLWI5OWEtNGE3My05YTEwLWRjMmVlYTk1NjBjMSIsIm5hbWUiOiJCb3J0IiwibGFzdG5hbWUiOiJUaG9tcHNvbSIsImVtYWlsIjoidXN1YXJpb2Zha2UxQG1haWxmYWtlLmNvbSIsInBob25lIjoiKzU0MTEyMzQ1Njk3OCIsImltYWdlIjoiaHR0cHM6Ly9jZG4taWNvbnMtcG5nLmZsYXRpY29uLmNvbS81MTIvMjE5LzIxOTk4My5wbmciLCJpYXQiOjE2NjA1OTA0OTQsImV4cCI6MTY2MDU5NDA5NH0.Wbt6pTri3gkf3_6sD2OBmiiKN6kHJrZ3swpT4JBB68Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}api/shoppingcartproducts",
+							"host": [
+								"{{host}}api"
+							],
+							"path": [
+								"shoppingcartproducts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add productos al carrito (usuario)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc1OGQwYjBjLWI5OWEtNGE3My05YTEwLWRjMmVlYTk1NjBjMSIsIm5hbWUiOiJCb3J0IiwibGFzdG5hbWUiOiJUaG9tcHNvbSIsImVtYWlsIjoidXN1YXJpb2Zha2UxQG1haWxmYWtlLmNvbSIsInBob25lIjoiKzU0MTEyMzQ1Njk3OCIsImltYWdlIjoiaHR0cHM6Ly9jZG4taWNvbnMtcG5nLmZsYXRpY29uLmNvbS81MTIvMjE5LzIxOTk4My5wbmciLCJpYXQiOjE2NjA1OTA0OTQsImV4cCI6MTY2MDU5NDA5NH0.Wbt6pTri3gkf3_6sD2OBmiiKN6kHJrZ3swpT4JBB68Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"productId\":\"854c4784-ad68-4a4c-bb49-a77ddc107832\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}api/shoppingcartproducts",
+							"host": [
+								"{{host}}api"
+							],
+							"path": [
+								"shoppingcartproducts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete producto del carrito (usuario)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MDZmNzZkLWRhMmItNDU5Mi1hYTVkLWY2Yjg0MDEzOTg4ZSIsIm5hbWUiOiJhZG1pbiIsImxhc3RuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsInBob25lIjoiKzU0MTE0NDQ0MTIzNCIsImltYWdlIjoiaHR0cHM6Ly9jZG4taWNvbnMtcG5nLmZsYXRpY29uLmNvbS81MTIvMjE5LzIxOTk4My5wbmciLCJpYXQiOjE2NTkxMDQ3MTcsImV4cCI6MTY1OTEwODMxN30.NMUUo1zOoZoS3JkjF6XtcAfrvjILrredQ6CG4VnYASs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}api/shoppingcartproducts/7b2d8c7d-f457-4d71-a202-a0ca3810f919",
+							"host": [
+								"{{host}}api"
+							],
+							"path": [
+								"shoppingcartproducts",
+								"7b2d8c7d-f457-4d71-a202-a0ca3810f919"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Info",
+			"item": [
+				{
+					"name": "Obtener info del sistema",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}api/info",
+							"host": [
+								"{{host}}api"
+							],
+							"path": [
+								"info"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
