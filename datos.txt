@@ -1,0 +1,8 @@
+
+
+Mongo Atlas password : O3BhPGG0cYVS8fWg
+O3BhPGG0cYVS8fWg
+
+CONEXION MONGO ATLAS : mongodb+srv://Admin:<password>@cluster0.2ksdu.mongodb.net/?retryWrites=true&w=majority
+
+mongodb+srv://admin:<password>@clusterprojecto.jkbf44v.mongodb.net/?retryWrites=true&w=majority
