@@ -10,3 +10,122 @@
 [2022-07-31T01:00:21.973] [ERROR] error - ReferenceError: req is not defined
     at Function.addOneOrder (file:///home/telecom/Documentos/Coder_Proyecto_Final/src/service/order.Service.js:23:33)
     at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[2022-08-15T16:12:56.286] [ERROR] error - error al enviar un mail Error: Invalid login: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials b65-20020a1f1b44000000b003774a319fe5sm7329876vkb.20 - gsmtp
+[2022-08-15T16:43:03.160] [ERROR] error - MongoWriteConcernError: No write concern mode named 'majority/projectoFinalDB' found in replica set configuration
+    at Connection.onMessage (C:\Users\u608427\Desktop\CODERHOUSE\proyecto_Final\node_modules\mongodb\lib\cmap\connection.js:203:30)
+    at MessageStream.<anonymous> (C:\Users\u608427\Desktop\CODERHOUSE\proyecto_Final\node_modules\mongodb\lib\cmap\connection.js:60:60)
+    at MessageStream.emit (node:events:527:28)
+    at processIncomingData (C:\Users\u608427\Desktop\CODERHOUSE\proyecto_Final\node_modules\mongodb\lib\cmap\message_stream.js:132:20)
+    at MessageStream._write (C:\Users\u608427\Desktop\CODERHOUSE\proyecto_Final\node_modules\mongodb\lib\cmap\message_stream.js:33:9)
+    at writeOrBuffer (node:internal/streams/writable:389:12)
+    at _write (node:internal/streams/writable:330:10)
+    at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+    at TLSSocket.ondata (node:internal/streams/readable:754:22)
+    at TLSSocket.emit (node:events:527:28) {
+  code: 79,
+  codeName: 'UnknownReplWriteConcern',
+  errInfo: {
+    writeConcern: {
+      w: 'majority/projectoFinalDB',
+      wtimeout: 0,
+      provenance: 'clientSupplied'
+    }
+  },
+  result: {
+    n: 1,
+    electionId: new ObjectId("7fffffff000000000000000c"),
+    opTime: { ts: new Timestamp({ t: 1660592582, i: 1 }), t: 12 },
+    writeConcernError: {
+      code: 79,
+      codeName: 'UnknownReplWriteConcern',
+      errmsg: "No write concern mode named 'majority/projectoFinalDB' found in replica set configuration",
+      errInfo: [Object]
+    },
+    ok: 1,
+    '$clusterTime': {
+      clusterTime: new Timestamp({ t: 1660592582, i: 1 }),
+      signature: [Object]
+    },
+    operationTime: new Timestamp({ t: 1660592582, i: 1 })
+  },
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[2022-08-15T16:45:40.936] [ERROR] error - MongoWriteConcernError: No write concern mode named 'majority/projectoFinalDB' found in replica set configuration
+    at Connection.onMessage (C:\Users\u608427\Desktop\CODERHOUSE\proyecto_Final\node_modules\mongodb\lib\cmap\connection.js:203:30)
+    at MessageStream.<anonymous> (C:\Users\u608427\Desktop\CODERHOUSE\proyecto_Final\node_modules\mongodb\lib\cmap\connection.js:60:60)
+    at MessageStream.emit (node:events:527:28)
+    at processIncomingData (C:\Users\u608427\Desktop\CODERHOUSE\proyecto_Final\node_modules\mongodb\lib\cmap\message_stream.js:132:20)
+    at MessageStream._write (C:\Users\u608427\Desktop\CODERHOUSE\proyecto_Final\node_modules\mongodb\lib\cmap\message_stream.js:33:9)
+    at writeOrBuffer (node:internal/streams/writable:389:12)
+    at _write (node:internal/streams/writable:330:10)
+    at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+    at TLSSocket.ondata (node:internal/streams/readable:754:22)
+    at TLSSocket.emit (node:events:527:28) {
+  code: 79,
+  codeName: 'UnknownReplWriteConcern',
+  errInfo: {
+    writeConcern: {
+      w: 'majority/projectoFinalDB',
+      wtimeout: 0,
+      provenance: 'clientSupplied'
+    }
+  },
+  result: {
+    n: 1,
+    electionId: new ObjectId("7fffffff000000000000000c"),
+    opTime: { ts: new Timestamp({ t: 1660592740, i: 3 }), t: 12 },
+    writeConcernError: {
+      code: 79,
+      codeName: 'UnknownReplWriteConcern',
+      errmsg: "No write concern mode named 'majority/projectoFinalDB' found in replica set configuration",
+      errInfo: [Object]
+    },
+    ok: 1,
+    '$clusterTime': {
+      clusterTime: new Timestamp({ t: 1660592740, i: 3 }),
+      signature: [Object]
+    },
+    operationTime: new Timestamp({ t: 1660592740, i: 3 })
+  },
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[2022-08-15T16:46:24.773] [ERROR] error - MongoWriteConcernError: No write concern mode named 'majority/projectoFinalDB' found in replica set configuration
+    at Connection.onMessage (C:\Users\u608427\Desktop\CODERHOUSE\proyecto_Final\node_modules\mongodb\lib\cmap\connection.js:203:30)
+    at MessageStream.<anonymous> (C:\Users\u608427\Desktop\CODERHOUSE\proyecto_Final\node_modules\mongodb\lib\cmap\connection.js:60:60)
+    at MessageStream.emit (node:events:527:28)
+    at processIncomingData (C:\Users\u608427\Desktop\CODERHOUSE\proyecto_Final\node_modules\mongodb\lib\cmap\message_stream.js:132:20)
+    at MessageStream._write (C:\Users\u608427\Desktop\CODERHOUSE\proyecto_Final\node_modules\mongodb\lib\cmap\message_stream.js:33:9)
+    at writeOrBuffer (node:internal/streams/writable:389:12)
+    at _write (node:internal/streams/writable:330:10)
+    at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+    at TLSSocket.ondata (node:internal/streams/readable:754:22)
+    at TLSSocket.emit (node:events:527:28) {
+  code: 79,
+  codeName: 'UnknownReplWriteConcern',
+  errInfo: {
+    writeConcern: {
+      w: 'majority/projectoFinalDB',
+      wtimeout: 0,
+      provenance: 'clientSupplied'
+    }
+  },
+  result: {
+    n: 1,
+    electionId: new ObjectId("7fffffff000000000000000c"),
+    opTime: { ts: new Timestamp({ t: 1660592783, i: 3 }), t: 12 },
+    writeConcernError: {
+      code: 79,
+      codeName: 'UnknownReplWriteConcern',
+      errmsg: "No write concern mode named 'majority/projectoFinalDB' found in replica set configuration",
+      errInfo: [Object]
+    },
+    ok: 1,
+    '$clusterTime': {
+      clusterTime: new Timestamp({ t: 1660592783, i: 3 }),
+      signature: [Object]
+    },
+    operationTime: new Timestamp({ t: 1660592783, i: 3 })
+  },
+  [Symbol(errorLabels)]: Set(0) {}
+}
