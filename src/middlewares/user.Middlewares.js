@@ -30,7 +30,7 @@ function isUserAdmin(req, res, next)
     }
     else
     {
-        res.status(401).send({status:"error",code:401, message:`Sin permisos suficientes para acceder al endpoint`});
+        res.status(401).send({status:"error",code:401, message:`Sin permisos suficientes para acceder`});
     }
 }
 

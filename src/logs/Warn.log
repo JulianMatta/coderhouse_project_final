@@ -13,3 +13,12 @@
 [2022-08-15T11:02:51.668] [WARN] warn - { ruta: '/login', metodo: 'GET' }
 [2022-08-15T11:06:30.960] [WARN] warn - { ruta: '/login', metodo: 'GET' }
 [2022-08-15T11:15:18.337] [WARN] warn - { ruta: '/login', metodo: 'GET' }
+[2022-08-15T18:43:52.289] [WARN] warn - { ruta: '/login', metodo: 'GET' }
+[2022-08-15T18:43:59.372] [WARN] warn - { ruta: '/registro', metodo: 'GET' }
+[2022-08-15T18:44:02.076] [WARN] warn - { ruta: '/registro', metodo: 'GET' }
+[2022-08-15T18:47:14.139] [WARN] warn - { ruta: '/home', metodo: 'GET' }
+[2022-08-15T18:51:01.690] [WARN] warn - { ruta: '/home', metodo: 'GET' }
+[2022-08-15T18:51:20.844] [WARN] warn - { ruta: '/api/info.', metodo: 'GET' }
+[2022-08-15T18:53:03.958] [WARN] warn - { ruta: '/registro', metodo: 'GET' }
+[2022-08-15T18:53:53.261] [WARN] warn - { ruta: '/registro/connection', metodo: 'GET' }
+[2022-08-15T18:53:58.674] [WARN] warn - { ruta: '/registro', metodo: 'GET' }

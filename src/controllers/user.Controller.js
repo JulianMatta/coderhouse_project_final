@@ -4,7 +4,7 @@ class UserController {
 
     static welcome(_req,res)
     {
-        res.send({message:"Proyecto final Julián Rotili", documentation: "https://documenter.getpostman.com/view/14969183/UzdzTRE1"})
+        res.send({message:"Proyecto final Julián Rotili"})
     }
     static loginUser(req, res)
     {
