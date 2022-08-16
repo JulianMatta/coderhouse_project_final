@@ -1,4 +1,4 @@
-const socket = io(); // con el io cierro la conexion entre el servidor y el cliente
+const socket = io(); // con el io se cierra la conexion entre el servidor y el cliente
 const message = document.querySelector("#message");
 const actions = document.querySelector("#websocket-actions");
 const send = document.querySelector("#sendMessage");
